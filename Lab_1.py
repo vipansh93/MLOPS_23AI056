@@ -6,7 +6,7 @@ def create_input_layer(image_2d):
     if len(image_2d) != 28 or any(len(row) != 28 for row in image_2d):
         raise ValueError("Input must be a 28x28 image")
     flattened = [pixel for row in image_2d for pixel in row]
-    print("flattened",flattened)
+    # print("flattened",flattened) single row
     return flattened
 
 def simple_network_function(input_vector, weights):
